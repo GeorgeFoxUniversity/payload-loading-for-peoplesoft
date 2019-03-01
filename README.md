@@ -22,6 +22,7 @@ Load job payment items into the PS Staging table.
 * **pay_start:** Earns begin date, this needs to match the current PS Paysheets entry for the target pay group.
 * **pay_end:** Earns end date, this needs to match the current PS Paysheets entry for the target pay group.
 * **pay_group:** The PeopleSoft pay group these records are for.
+* **company:** The PeopleSoft company code these records are for.
 * **--config:** Path of a config containing db connection details.  If this isn't given it will check your environmental variables for connection details. 
 * **--as-sysdba:** Connect to the database as sysdba.  Probably not something you want to do in production.
 
@@ -42,6 +43,8 @@ environmental variables for the database connection details.
 
 * `disable_direct_deposit` - Disable Direct Deposit for this entry.
 * `EMPLID`- PS Emplid of job for this entry.
+* `empl_rcd` - PS Job empl_rcd for this entry, defaults to 0
+* `seq_no` - Sequence number for the staging table, defaults to 0.  You are response for making sure the order in the csv file is correct
 * `earning_code`- Earning code for this entry.
 * `hours`- Hours to be loaded for this entry. Mutually exclusive with amount.
 * `amount` - Amount (money) to be loaded for this entry. Mutually exclusive with hours.
@@ -51,9 +54,15 @@ environmental variables for the database connection details.
 ### Example
 
 ```
-python import-csv.py example.csv 2019-01-01 2019-01-31 PAYGROUP_CODE --config config.ini
+python import-csv.py example.csv 2019-01-01 2019-01-31 PAYGROUP_CODE COMPANY_CODE --config config.ini
 ```
 
+## Useful stuff to read before you try to make this script work
+
+The PeopleSoft Documentation related to the staging table this script loads into
+
+* <http://docs.oracle.com/cd/E79521_01/hcm92pbr11/eng/hcm/hpay/task_DataInputRequirementsforThird-PartyPaysheetData-3e3d81.html#ua57c9be8-6326-4b37-8dac-355df2d501fb>
+* <http://docs.oracle.com/cd/E79521_01/hcm92pbr11/eng/hcm/hpay/task_LoadingPaysheetTransactions-3e3aab.html?pli=ul_d209e281_hpay>
 
 ## Copyright Stuff
 
