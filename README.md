@@ -42,7 +42,7 @@ environmental variables for the database connection details.
 ### Valid Column Headers
 
 * `disable_direct_deposit` - Disable Direct Deposit for this entry.
-* `EMPLID`- PS Emplid of job for this entry.
+* `emplid`- PS Emplid of job for this entry.
 * `empl_rcd` - PS Job empl_rcd for this entry, defaults to 0
 * `seq_no` - Sequence number for the staging table, defaults to 0.  You are response for making sure the order in the csv file is correct
 * `earning_code`- Earning code for this entry.
