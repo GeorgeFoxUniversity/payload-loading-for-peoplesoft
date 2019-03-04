@@ -298,7 +298,8 @@ if __name__ == "__main__":
     df = pd.read_csv(args.csv, dtype={'combo_code':str, 'earning_code':str}) 
     
     # Convert the Total column to a regular number.
-    df['amount'] = df.Total.apply(lambda x: float(re.sub(r'[^\d.]', '', x)) if isinstance(x, str) else x)
+    if 'amount' in df.columns:
+        df['amount'] = df.amount.apply(lambda x: float(re.sub(r'[^\d.]', '', x)) if isinstance(x, str) else x)
 
     # Only include rows with a non null emplid
     df = df[ ~pd.isnull(df.emplid) ] 
