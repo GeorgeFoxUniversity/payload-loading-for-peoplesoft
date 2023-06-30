@@ -61,8 +61,8 @@ python import-csv.py example.csv 2019-01-01 2019-01-31 PAYGROUP_CODE COMPANY_COD
 
 The PeopleSoft Documentation related to the staging table this script loads into
 
-* <http://docs.oracle.com/cd/E79521_01/hcm92pbr11/eng/hcm/hpay/task_DataInputRequirementsforThird-PartyPaysheetData-3e3d81.html#ua57c9be8-6326-4b37-8dac-355df2d501fb>
-* <http://docs.oracle.com/cd/E79521_01/hcm92pbr11/eng/hcm/hpay/task_LoadingPaysheetTransactions-3e3aab.html?pli=ul_d209e281_hpay>
+* https://docs.oracle.com/cd/F13810_02/hcm92pbr29/eng/hcm/hpay/task_DataInputRequirementsforThird-PartyPaysheetData-3e3d81.html
+* https://docs.oracle.com/cd/F13810_02/hcm92pbr29/eng/hcm/hpay/task_LoadingPaysheetTransactions-3e3aab.html
 
 ## Copyright Stuff
 
